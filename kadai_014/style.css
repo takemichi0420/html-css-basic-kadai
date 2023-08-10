@@ -1,0 +1,40 @@
+body {
+    font-family: "Arial", "Meiryo", sans-serif;
+
+}
+
+.container {
+    text-align: center;
+    font-size: 20px;
+}
+
+.title {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 40px;
+    /*文字間を指定*/
+    letter-spacing: 48px;
+    /* 文字に影をつける */
+    text-shadow: 2px 2px 4px gray;
+    /* 下線 */
+    border-bottom: 3px solid rgb(115, 115, 114);
+}
+
+.m {
+    color: aqua;
+}
+
+.p {
+    color: rgb(255, 192, 203);
+}
+
+.item01 {
+    color: rgb(255, 192, 203);
+}
+
+.item02 {
+    color: aqua;
+}
+
+#category p {
+    font-weight: bold;
+}
