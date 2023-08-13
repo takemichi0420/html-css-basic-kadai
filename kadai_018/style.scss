@@ -4,18 +4,20 @@ $pink: #ffd9df;
 $skyblue: skyblue;
 $size: 800px;
 
+// mixin設定（middle）
 @mixin middle_position($num) {
     position: absolute;
     top: $num;
     left: $num;
 }
 
+// mixin設定（bottom）
 @mixin bottom_position($num) {
     position: relative;
     left: $num;
 }
 
-
+// 全ての要素を中央へ寄せる
 body {
     margin: 0 20%;
 }
