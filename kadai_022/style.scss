@@ -1,0 +1,106 @@
+// media query
+// break poin設定
+$breakpoint: (sp: 'screen and (max-width: 768px)',
+);
+
+// 
+@mixin mq($bp) {
+    @media #{map-get($breakpoint, $bp)} {
+        @content;
+    }
+}
+
+
+body {
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: rgb(244, 79, 79);
+}
+
+main {
+    margin: 10px;
+}
+
+h1 {
+    margin: 0;
+    color: rgb(255, 255, 255);
+}
+
+p {
+    margin: 0;
+    font-size: 20px;
+
+    @include mq(sp) {
+        font-size: 25px;
+    }
+
+}
+
+a {
+    font-size: 20px;
+}
+
+#parent {
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(sp) {
+        flex-direction: column;
+    }
+
+}
+
+.contents {
+    border: 3px solid rgb(238, 204, 204);
+    flex-basis: 25%;
+    padding: 10px 15px;
+    margin: 20px 0;
+    text-align: center;
+
+    & p:nth-of-type(2)::first-letter {
+        font-weight: bold;
+        color: rgb(97, 206, 249);
+    }
+
+    & img {
+        margin: 10px 0;
+        width: 70%;
+    }
+}
+
+h2 {
+    font-size: 25px;
+
+    text-decoration: 3px underline dashed rgb(236, 122, 122);
+
+    &::before {
+        content: "●";
+        color: rgb(239, 111, 139);
+    }
+
+    @include mq(sp) {
+        font-size: 30px;
+    }
+
+}
+
+footer {
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+}
+
+a {
+    color: rgb(255, 255, 255);
+
+    &:hover {
+        color: rgb(245, 178, 168);
+    }
+
+    &:visited {
+        color: rgb(193, 234, 251);
+    }
+}
